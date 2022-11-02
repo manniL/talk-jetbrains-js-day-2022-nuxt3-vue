@@ -101,8 +101,34 @@ clicks: 1
 </h1>
 
 ---
+preload: false
+---
 
-# Intro
+# Nuxt.js
+
+<div class="absolute left-98 top-34">
+<logos-nuxt-icon v-motion class="text-10xl" :initial="{ y: 0, x: 0, scale: 1.0 }" :enter="{ y: -176, x: -280, scale: 0.3, transition: { duration: 750, delay: 250 } }"/>
+</div>
+
+<Grid class="mt-16 gap-x-8">
+<VClicks class="space-y-4">
+
+* **Progressive** framework
+* Based on Vue 3 and Vite
+* Written in TypeScript
+* Performant and lightweight out of the box
+
+</VClicks>
+
+<VClicks class="space-y-4">
+
+* Versatile - SPA/SSG/SSR/ISR
+* Universal deployment
+* Optimized for cold start and serverless
+* Easily Extensible
+
+</VClicks>
+</Grid>
 
 ---
 
@@ -128,6 +154,7 @@ clicks: 1
 * Layouts
 * Error handling (coarse- to fine-grained)
 * Page-level and layout-level transitions
+* Data fetching
 * State management
 * Nuxt plugins and modules
 * Dealing with assets
