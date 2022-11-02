@@ -113,37 +113,52 @@ preload: false
 <Grid class="mt-16 gap-x-8">
 <VClicks class="space-y-4">
 
-* **Progressive** framework
-* Based on Vue 3 and Vite
-* Written in TypeScript
-* Performant and lightweight out of the box
+* **Progressive** framework 💡
+* Based on Vue 3 <logos-vue /> and Vite <logos-vitejs />
+* Written in TypeScript <logos-typescript-icon />
+* Performant and lightweight out of the box 📦
 
 </VClicks>
 
 <VClicks class="space-y-4">
 
-* Versatile - SPA/SSG/SSR/ISR
-* Universal deployment
-* Optimized for cold start and serverless
-* Easily Extensible
+* Versatile - SPA / SSG / SSR / ISR 🃏
+* Universal deployment 🆙
+* Optimized for cold start and serverless ⚡️
+* Easily Extensible ⚙️
 
 </VClicks>
 </Grid>
 
 ---
 
-# Main part
+---
 
-* Minimal + dedicated folder structure
-* Auto imports -> (alternative: unplugin)
-* FS based routing -> (alternative: unplugin)
-* Transitions
-* Nuxt content + MDC
-* SEO
-* Server Engine - Nitro(pack)
-* SSR and Hybrid
-* Runtime Config
-* Deployment
+# Folder structure
+
+---
+
+# File-system based routing
+
+---
+
+# Auto imports
+
+---
+
+# Nuxt Content
+
+---
+
+# Nitro(pack)
+
+---
+
+# SSR / SSG / Hybrid
+
+---
+
+# Deployment
 
 ---
 
@@ -151,6 +166,7 @@ preload: false
 
 <VClicks>
 
+* Runtime config
 * Layouts
 * Error handling (coarse- to fine-grained)
 * Page-level and layout-level transitions
@@ -161,8 +177,6 @@ preload: false
 * ...and more!
 
 </VClicks>
-
-<!-- TODO Outlook  -->
 
 ---
 
