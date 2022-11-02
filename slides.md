@@ -9,9 +9,9 @@ lineNumbers: true
 layout: intro
 ---
 
-# Nuxt 3
+# <span class="text-[#00dc82]">Nuxt</span> 3 <logos-nuxt-icon class="text-xl" />
 
-## More Than Vue 3 on Steroids
+## <span class="text-[#80eec0]">More</span> Than Vue 3 on Steroids
 
 ### JetBrains JavaScript Day 2022
 
@@ -58,14 +58,94 @@ heading: About me
 </template>
 
 ---
+layout: intro
+preload: false
+clicks: 1
+---
 
-# Hook
+<h1 class="mt-12 flex justify-center items-center">
+
+<logos-vue v-motion class="text-8xl" :initial="{ x: -500 }" :enter="{ x: 0, transition: { duration: 500 } }"/>
+<mdi-heart v-if="$slidev.nav.clicks === 0" class="text-8xl invisible"/>
+<mdi-heart v-if="$slidev.nav.clicks === 1" v-motion :initial="{ x: 500 }" :enter="{ x: 0, transition: { duration: 500 } }" class="text-red-500 text-8xl" />
+
+</h1>
+
+<!--
+* Vue is a lightweight and powerful component-level framework
+* But when your project grows, you often want more than "just an SPA"
+-->
+
+---
+layout: intro
+preload: false
+---
+
+<h1 v-motion :initial="{ y: 0 }" :enter="{ y: -500, transition: { duration: 750, delay: 250 } }" class="mt-12 flex justify-center items-center">
+
+<logos-vue class="text-8xl"/>
+<mdi-heart class="text-red-500 text-8xl" />
+
+</h1>
+
+---
+layout: intro
+preload: false
+clicks: 1
+---
+
+<h1 class="mt-12">
+
+<logos-nuxt-icon class="text-10xl" :class="$slidev.nav.clicks === 1 && 'transition ease-in-out animate-ping'" :style="$slidev.nav.clicks === 1 && 'animation: ping 2s cubic-bezier(0, 0, 0.2, 1) 3 !important;'" v-motion :initial="{ y: 500 }" :enter="{ y: 0, transition: { duration: 500, delay: 250 } }"/>
+
+</h1>
+
+---
 
 # Intro
 
+---
+
 # Main part
 
-# Outro
+* Minimal + dedicated folder structure
+* Auto imports -> (alternative: unplugin)
+* FS based routing -> (alternative: unplugin)
+* Transitions
+* Nuxt content + MDC
+* SEO
+* Server Engine - Nitro(pack)
+* SSR and Hybrid
+* Runtime Config
+* Deployment
+
+---
+
+# Outlook
+
+<VClicks>
+
+* Layouts
+* Error handling (coarse- to fine-grained)
+* Page-level and layout-level transitions
+* State management
+* Nuxt plugins and modules
+* Dealing with assets
+* ...and more!
+
+</VClicks>
+
+<!-- TODO Outlook  -->
+
+---
+
+# Summary
+
+<VClicks>
+
+<!-- TODO Summary  -->
+
+</VClicks>
 
 
 ---
@@ -115,15 +195,5 @@ layout: intro
 
 # Slides / Repo
 
-* Slides: [https://lichter.link/vuejs-de-2022-slides/](https://lichter.link/vuejs-de-2022-slides/)
-* Repo: [https://lichter.link/vuejs-de-2022-repo/](https://lichter.link/vuejs-de-2022-repo/)
-
----
-layout: intro
----
-
-<div class="flex items-center justify-center h-80">
-
-# All speakers & organisators - please come join the stage
-
-</div>
+* Slides: [https://lichter.link/jetbrains-js-day-2022-slides/](https://lichter.link/jetbrains-js-day-2022-slides/)
+* Repo: [https://lichter.link/jetbrains-js-day-2022-repo/](https://lichter.link/jetbrains-js-day-2022-repo/)
