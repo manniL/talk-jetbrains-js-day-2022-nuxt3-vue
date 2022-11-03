@@ -1,6 +1,6 @@
 ---
 theme: ./theme
-title: "Nuxt 3 - More than Vue 3 on Steroids"
+title: "Nuxt 3 * More than Vue 3 on Steroids"
 website: lichter.io
 handle: TheAlexLichter
 favicon: https://lichter.io/img/me@2x.jpg
@@ -47,12 +47,12 @@ heading: About me
 <template v-slot:right>
 <VClicks class="space-y-2 mt-10 text-xl h-full">
 
-- <mdi-account-check class="text-green-100" /> **Web Development Consultant**
-- <mdi-microphone /> Speaker & Instructor
-- <logos-nuxt-icon /> Nuxt.js Maintainer
-- <mdi-twitter class="text-blue-400" /> @TheAlexLichter
-- <mdi-web /> [https://lichter.io](https://lichter.io)
-- <mdi-github /> [manniL](https://github.com/manniL)
+* <mdi-account-check class="text-green-100" /> **Web Development Consultant**
+* <mdi-microphone /> Speaker & Instructor
+* <logos-nuxt-icon /> Nuxt.js Maintainer
+* <mdi-twitter class="text-blue-400" /> @TheAlexLichter
+* <mdi-web /> [https://lichter.io](https://lichter.io)
+* <mdi-github /> [manniL](https://github.com/manniL)
 
 </VClicks>
 </template>
@@ -113,19 +113,19 @@ preload: false
 <Grid class="mt-16 gap-x-8">
 <VClicks class="space-y-4">
 
-- **Progressive** framework 💡
-- Based on Vue 3 <logos-vue /> and Vite <logos-vitejs />
-- Written in TypeScript <logos-typescript-icon />
-- Performant and lightweight out of the box 📦
+* **Progressive** framework 💡
+* Based on Vue 3 <logos-vue /> and Vite <logos-vitejs />
+* Written in TypeScript <logos-typescript-icon />
+* Performant and lightweight out of the box 📦
 
 </VClicks>
 
 <VClicks class="space-y-4">
 
-- Versatile - SPA / SSG / SSR / ISR 🃏
-- Universal deployment 🆙
-- Optimized for cold start and serverless ⚡️
-- Easily Extensible ⚙️
+* Versatile - SPA / SSG / SSR / ISR 🃏
+* Universal deployment 🆙
+* Optimized for cold start and serverless ⚡️
+* Easily Extensible ⚙️
 
 </VClicks>
 </Grid>
@@ -136,9 +136,9 @@ preload: false
 
 <VClicks>
 
-- No folders by default
-- Easy to get started and to prototype applications
-- Supercharged directory structure available
+* No folders by default
+* Easy to get started and to prototype applications
+* Supercharged directory structure available
 
 </VClicks>
 
@@ -158,8 +158,8 @@ preload: false
 
 <VClicks>
 
-- You create routes by adding `.vue` files into the `/pages` folder!
-- PHP-vibes (in a good way)? Yes 🎉
+* You create routes by adding `.vue` files into the `/pages` folder!
+* PHP-vibes (in a good way)? Yes 🎉
 
 </VClicks>
 
@@ -194,8 +194,8 @@ pages/
 
 <VClicks>
 
-- You can use parameters in parts of the route name, e.g. `artists-[group].vue`
-- Nesting with folders is also possible
+* You can use parameters in parts of the route name, e.g. `artists-[group].vue`
+* Nesting with folders is also possible
 
 </VClicks>
 
@@ -205,8 +205,8 @@ pages/
 
 <VClicks>
 
-- Accessing the route parameters defined through the files is important
-- You can do so via `$route` in the template
+* Accessing the route parameters defined through the files is important
+* You can do so via `$route` in the template
 
 </VClicks>
 
@@ -232,7 +232,7 @@ pages/
 
 <VClicks>
 
-- But you can also use the `useRoute` composable
+* But you can also use the `useRoute` composable
 
 </VClicks>
 
@@ -255,13 +255,13 @@ console.log(group);
 
 <VClicks>
 
-- When navigating in our application, do not use `<a>`
-- Neither `<RouterLink>`
-- But `<NuxtLink>`
-  - which inherits from the `vue-router` link
-  - and gives some benefits like page prefetching
-- It also handles external links now!
-- You specify the path or URL via `to` prop
+* When navigating in our application, do not use `<a>`
+* Neither `<RouterLink>`
+* But `<NuxtLink>`
+  * which inherits from the `vue-router` link
+  * and gives some benefits like page prefetching
+* It also handles external links now!
+* You specify the path or URL via `to` prop
 
 </VClicks>
 
@@ -279,58 +279,60 @@ console.log(group);
 
 # Auto imports
 
-- Show component auto import
-- Show composables auto import
+* Show component auto import
+* Show composables auto import
 
 ---
 
 # Nuxt Content
 
-- Show Nuxt content module basics
-- .md file, routing, maybe document driven?
+* Show Nuxt content module basics
+* .md file, routing, maybe document driven?
 
 ---
 
 # Nitro(pack)
 
-- Huge difference to classic Vue
-- Nuxt's server engine
-- Responsible for deployment, routing and API
-- Can be used to implement endpoints and middleware on the server-side
-- Powered by [`h3`](https://github.com/unjs/h3/) under the hood
+* Huge difference to classic Vue
+* Nuxt's server engine
+* Responsible for deployment, routing and API
+* Can be used to implement endpoints and middleware on the server-side
+* Powered by [`h3`](https://github.com/unjs/h3/) under the hood
 
 ---
 
 # SSR / SSG / Hybrid
 
-- SSR/SSG chosen based on simple command
-- SSR = Can be hybrid now thanks to page rules!
+* SSR/SSG chosen based on simple command
+* SSR = Can be hybrid now thanks to page rules!
 
-<!-- TODO: Show page rules -->
+<!-* TODO: Show page rules -->
 
 ---
 
 # Deployment
 
-- Seamless on over 10+ platforms
-- Five of them zero-config
-  - Deployment takes less than 10 minutes
-- From simple Node.js support over serverless and workers to Vercel and Netlify
-- Own preset can be developed - any platform could be supported
+* Seamless on over 10+ platforms
+* Five of them zero-config
+  * Deployment takes less than 10 minutes
+* From simple Node.js support over serverless and workers to Vercel and Netlify
+* Own preset can be developed * any platform could be supported
+
+---
 
 # Outlook
 
 <VClicks>
 
-- Runtime config
-- Layouts
-- Error handling (coarse- to fine-grained)
-- Page-level and layout-level transitions
-- Data fetching
-- State management
-- Nuxt plugins and modules
-- Dealing with assets
-- ...and more!
+* Runtime config
+* Layouts
+* Error handling (coarse* to fine-grained)
+* Page-level and layout-level transitions
+* Data fetching
+* State management
+* Nuxt plugins and modules
+* Dealing with assets
+* ...and more!
 
 </VClicks>
 
@@ -338,7 +340,13 @@ console.log(group);
 
 # Summary
 
-<!-- TODO Summary  -->
+<VClicks>
+
+* Universal deployment is made easy with Nuxt
+* Phenomenal DX and sensible defaults = Happy Developers
+* <logos-nuxt-icon /> is more than Vue on Steroids
+
+</VClicks>
 
 ---
 layout: intro
@@ -365,12 +373,12 @@ heading: Thank you for your attention!
 
 <template v-slot:right>
 
-- <mdi-account-check class="text-green-100" /> **Web Development Consultant**
-- <mdi-microphone /> Speaker & Instructor
-- <logos-nuxt-icon /> Nuxt.js Maintainer
-- <mdi-twitter class="text-blue-400" /> @TheAlexLichter
-- <mdi-web /> [https://lichter.io](https://lichter.io)
-- <mdi-github /> [manniL](https://github.com/manniL)
+* <mdi-account-check class="text-green-100" /> **Web Development Consultant**
+* <mdi-microphone /> Speaker & Instructor
+* <logos-nuxt-icon /> Nuxt.js Maintainer
+* <mdi-twitter class="text-blue-400" /> @TheAlexLichter
+* <mdi-web /> [https://lichter.io](https://lichter.io)
+* <mdi-github /> [manniL](https://github.com/manniL)
 
 </template>
 
@@ -386,5 +394,5 @@ layout: intro
 
 # Slides / Repo
 
-- Slides: [https://lichter.link/jetbrains-js-day-2022-slides/](https://lichter.link/jetbrains-js-day-2022-slides/)
-- Repo: [https://lichter.link/jetbrains-js-day-2022-repo/](https://lichter.link/jetbrains-js-day-2022-repo/)
+* Slides: [https://lichter.link/jetbrains-js-day-2022-slides/](https://lichter.link/jetbrains-js-day-2022-slides/)
+* Repo: [https://lichter.link/jetbrains-js-day-2022-repo/](https://lichter.link/jetbrains-js-day-2022-repo/)
