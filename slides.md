@@ -1,6 +1,6 @@
 ---
 theme: ./theme
-title: "Nuxt 3 * More than Vue 3 on Steroids"
+title: "Nuxt 3 - More than Vue 3 on Steroids"
 website: lichter.io
 handle: TheAlexLichter
 favicon: https://lichter.io/img/me@2x.jpg
@@ -153,12 +153,28 @@ preload: false
 </div>
 
 ---
+preload: false
+---
+# Folder structure
+
+* No folders by default
+* Easy to get started and to prototype applications
+* Supercharged directory structure available
+
+
+<div class="justify-around items-center flex mt-4">
+  <img src="/nuxt-minimal-ts.png" alt="Minimal folders needed" class="h-30">
+  <img v-motion :initial="{x:0, y:0, scale: 1.0}" :enter="{x: 600, y: -1250, scale: 18.0, transition: {delay: 250, duration: 750 }}" src="/nuxt-folders.png" alt="More Nuxt folders" class="h-70">
+</div>
+
+---
 
 # Creating Routes
 
+* You create routes by adding `.vue` files into the `/pages` folder!
+
 <VClicks>
 
-* You create routes by adding `.vue` files into the `/pages` folder!
 * PHP-vibes (in a good way)? Yes 🎉
 
 </VClicks>
@@ -258,8 +274,8 @@ console.log(group);
 * When navigating in our application, do not use `<a>`
 * Neither `<RouterLink>`
 * But `<NuxtLink>`
-  * which inherits from the `vue-router` link
-  * and gives some benefits like page prefetching
+    * which inherits from the `vue-router` link
+    * and gives some benefits like page prefetching
 * It also handles external links now!
 * You specify the path or URL via `to` prop
 
@@ -277,46 +293,181 @@ console.log(group);
 
 ---
 
-# Auto imports
+# Auto imports - Vue
 
-* Show component auto import
-* Show composables auto import
+<Grid>
+<Code v-click file="plain.vue">
+
+```vue
+<script lang="ts" setup>
+import { reactive, computed } from 'vue'
+
+const author = ref('John Doe')
+const books = ref([
+    'Nuxt 2 - Unknown Secrets',
+    'Nuxt 3 - Beginners Guide',
+    'Nuxt 4 - The Future'
+])
+
+const hasPublishedBooks = computed(() => {
+  return books.value.length > 0
+})
+</script>
+```
+
+</Code>
+
+<Code v-click file="nuxt.vue">
+
+```vue
+<script lang="ts" setup>
+const author = ref('John Doe')
+const books = ref([
+    'Nuxt 2 - Unknown Secrets',
+    'Nuxt 3 - Beginners Guide',
+    'Nuxt 4 - The Future'
+])
+
+const hasPublishedBooks = computed(() => {
+  return books.value.length > 0
+})
+</script>
+```
+
+</Code>
+</Grid>
+
+<VClicks>
+
+* Auto-import Vue's composition API exports like `ref` or `computed`
+* Still have full type safety and intellisense
+
+</VClicks>
+
+
+---
+
+# Auto imports - Composables
+
+<div>
+<Code v-click file="composables/useApi.ts">
+
+```ts
+export const useApi = () => {
+  /* ... */
+  return {
+    api
+  }
+}
+```
+
+</Code>
+</div>
+
+
+<Grid>
+<Code v-click file="plain.vue">
+
+```vue
+<script lang="ts" setup>
+import { useApi } from '~/composables/useApi'
+import { useMouse } from '@vueuse/core'
+
+const { api } = useApi()
+const { x, y } = useMouse()
+</script>
+```
+
+</Code>
+
+<Code v-click file="nuxt.vue">
+
+```vue
+<script lang="ts" setup>
+const { api } = useApi()
+const { x, y } = useMouse()
+</script>
+```
+
+</Code>
+</Grid>
+
+<VClicks>
+
+* Auto-importing custom composables via `/composables` possible
+* Also easy library integration, e.g. of VueUse
+
+</VClicks>
+
 
 ---
 
 # Nuxt Content
 
-* Show Nuxt content module basics
-* .md file, routing, maybe document driven?
+<VClicks>
+
+* Turn Nuxt into a file-based CMS
+* Provide your content as Markdown, YML, CSV or JSON
+* Code highlighting and content querying out of the box
+* MDC - Write Vue components inside your markdown!
+* Quick [Demo](https://stackblitz.com/github/nuxt/starter/tree/content)
+
+</VClicks>
 
 ---
 
 # Nitro(pack)
 
-* Huge difference to classic Vue
+<VClicks>
+
 * Nuxt's server engine
-* Responsible for deployment, routing and API
 * Can be used to implement endpoints and middleware on the server-side
 * Powered by [`h3`](https://github.com/unjs/h3/) under the hood
+* Responsible for deployment too
+
+</VClicks>
 
 ---
 
-# SSR / SSG / Hybrid
+# Rendering modes
 
-* SSR/SSG chosen based on simple command
-* SSR = Can be hybrid now thanks to page rules!
+<VClicks>
 
-<!-* TODO: Show page rules -->
+* Switch between client-side rendering only (pure SPA) and server-side rendering via config
+* Choose SSR or full pre-rendering (SSG) via command
+    * `nuxt build`
+    * `nuxt generate`
+* Hybrid rendering is supported too via Route rules (experimental)!
+    * Mix up pre-rendering, on-the-fly SSR, SPA-like behavior, ISG and ISR as you like
+
+</VClicks>
+
+<Code v-click="4" file="nuxt.config.ts">
+
+```ts {all|3|4|5|6|all} {at:4}
+export default defineNuxtConfig({
+  routeRules: {
+    '/blog/**': { swr: true },
+    '/articles/**': { static: true },
+    '/_nuxt/**': { headers: { 'cache-control': 's-maxage=0' } },
+    '/admin/**': { ssr: false },
+    // and more options like CORS or redirects!
+  }
+})
+```
+
+</Code>
 
 ---
 
 # Deployment
 
-* Seamless on over 10+ platforms
-* Five of them zero-config
-  * Deployment takes less than 10 minutes
-* From simple Node.js support over serverless and workers to Vercel and Netlify
-* Own preset can be developed * any platform could be supported
+* Seamless on over [10+ platforms](https://nitro.unjs.io/deploy)
+* Five of them zero-config (i.e. Netlify <logos-netlify /> and Vercel <logos-vercel-icon class="fill-white" />)
+    * Frictionless deployment by just connecting your repository
+* From simple Node.js support over serverless to workers
+    * Deno <logos-deno /> coming soon as well!
+* Own preset can be developed - any platform could be supported
 
 ---
 
@@ -324,14 +475,14 @@ console.log(group);
 
 <VClicks>
 
+* `nuxt.config.ts`
 * Runtime config
 * Layouts
-* Error handling (coarse* to fine-grained)
+* Error handling (coarse- to fine-grained)
 * Page-level and layout-level transitions
 * Data fetching
 * State management
 * Nuxt plugins and modules
-* Dealing with assets
 * ...and more!
 
 </VClicks>
@@ -345,6 +496,7 @@ console.log(group);
 * Universal deployment is made easy with Nuxt
 * Phenomenal DX and sensible defaults = Happy Developers
 * <logos-nuxt-icon /> is more than Vue on Steroids
+* A progressive app-level framework to reduce friction around developing your app
 
 </VClicks>
 
