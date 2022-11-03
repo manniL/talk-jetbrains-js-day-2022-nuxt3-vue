@@ -427,6 +427,25 @@ const { x, y } = useMouse()
 
 </VClicks>
 
+<Code v-click file="server/api/my-endpoint.ts">
+
+```ts 
+export default defineEventHandler((event) => {
+  return {
+    data: 'Automatically return JSON, text or whatever you like'
+  }
+})
+```
+
+</Code>
+
+<VClicks>
+
+* Fetch it in your component, e.g. via `$fetch` - `await $fetch('/api/my-endpoint')`
+* Full intellisense + type support for Nitro endpoints!
+
+</VClicks>
+
 ---
 
 # Rendering modes
@@ -462,12 +481,16 @@ export default defineNuxtConfig({
 
 # Deployment
 
+<VClicks>
+
 * Seamless on over [10+ platforms](https://nitro.unjs.io/deploy)
 * Five of them zero-config (i.e. Netlify <logos-netlify /> and Vercel <logos-vercel-icon class="fill-white" />)
     * Frictionless deployment by just connecting your repository
 * From simple Node.js support over serverless to workers
     * Deno <logos-deno /> coming soon as well!
 * Own preset can be developed - any platform could be supported
+
+</VClicks>
 
 ---
 
