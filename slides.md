@@ -495,10 +495,19 @@ export default defineNuxtConfig({
 
 * Universal deployment is made easy with Nuxt
 * Phenomenal DX and sensible defaults = Happy Developers
-* <logos-nuxt-icon /> is more than Vue on Steroids
-* A progressive app-level framework to reduce friction around developing your app
 
 </VClicks>
+
+<div class="mt-16 text-center">
+<VClicks>
+
+# <logos-nuxt-icon /> is more than Vue on Steroids
+
+### A progressive app-level framework...
+### ...to reduce friction around developing your app
+
+</VClicks>
+</div>
 
 ---
 layout: intro
