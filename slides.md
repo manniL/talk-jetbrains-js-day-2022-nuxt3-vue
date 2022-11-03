@@ -30,10 +30,8 @@ layout: intro
 </style>
 
 ---
-
 layout: two-cols
 heading: About me
-
 ---
 
 <template v-slot:default>
@@ -60,11 +58,9 @@ heading: About me
 </template>
 
 ---
-
 layout: intro
 preload: false
 clicks: 1
-
 ---
 
 <h1 class="mt-12 flex justify-center items-center">
@@ -81,10 +77,8 @@ clicks: 1
 -->
 
 ---
-
 layout: intro
 preload: false
-
 ---
 
 <h1 v-motion :initial="{ y: 0 }" :enter="{ y: -500, transition: { duration: 750, delay: 250 } }" class="mt-12 flex justify-center items-center">
@@ -95,11 +89,9 @@ preload: false
 </h1>
 
 ---
-
 layout: intro
 preload: false
 clicks: 1
-
 ---
 
 <h1 class="mt-12">
@@ -109,8 +101,8 @@ clicks: 1
 </h1>
 
 ---
-
-## preload: false
+preload: false
+---
 
 # Nuxt.js
 
@@ -307,7 +299,7 @@ console.log(group);
 - Can be used to implement endpoints and middleware on the server-side
 - Powered by [`h3`](https://github.com/unjs/h3/) under the hood
 
-## </VClicks>
+---
 
 # SSR / SSG / Hybrid
 
@@ -346,25 +338,19 @@ console.log(group);
 
 # Summary
 
-<VClicks>
-
 <!-- TODO Summary  -->
 
-</VClicks>
-
 ---
-
-## layout: intro
+layout: intro
+---
 
 # Thanks a lot to my sponsors!
 
 <img src="/sponsors.svg" class="h-70 mx-auto" alt="My GitHub sponsors">
 
 ---
-
 layout: two-cols
 heading: Thank you for your attention!
-
 ---
 
 <template v-slot:default>
@@ -395,8 +381,8 @@ heading: Thank you for your attention!
 </style>
 
 ---
-
-## layout: intro
+layout: intro
+---
 
 # Slides / Repo
 
