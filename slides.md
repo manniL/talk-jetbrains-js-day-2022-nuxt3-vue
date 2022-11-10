@@ -410,7 +410,7 @@ const { x, y } = useMouse()
 * Provide your content as Markdown, YML, CSV or JSON
 * Code highlighting and content querying out of the box
 * MDC - Write Vue components inside your markdown!
-* Quick [Demo](https://stackblitz.com/github/nuxt/starter/tree/content)
+* Quick [Demo](https://lichter.link/jetbrains-js-day-2022-demo/)
 
 </VClicks>
 
@@ -580,3 +580,4 @@ layout: intro
 
 * Slides: [https://lichter.link/jetbrains-js-day-2022-slides/](https://lichter.link/jetbrains-js-day-2022-slides/)
 * Repo: [https://lichter.link/jetbrains-js-day-2022-repo/](https://lichter.link/jetbrains-js-day-2022-repo/)
+* Demo: [https://lichter.link/jetbrains-js-day-2022-demo/](https://lichter.link/jetbrains-js-day-2022-demo/)
