@@ -300,7 +300,7 @@ console.log(group);
 
 ```vue
 <script lang="ts" setup>
-import { reactive, computed } from 'vue'
+import { ref, computed } from 'vue'
 
 const author = ref('John Doe')
 const books = ref([
